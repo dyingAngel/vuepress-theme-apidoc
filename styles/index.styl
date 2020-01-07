@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
+
+:root {
+  --sp20: 20px;
+  --sp32: 32px;
+
+  --method-area-padding: 2.5rem;
+  --example-width: 40vw;
+  --example-min-width: 300px;
+  --example-max-width: 600px;
+  --copy-width: calc(var(--example-width) - var(--method-area-padding));
+  --copy-max-width: 600px;
+  --content-max-width: calc(var(--example-max-width) + var(--copy-max-width) + var(--method-area-padding) + var(--method-area-padding) + var(--sp32) + var(--sp32));
+
+  --section-header-line-height: 40px;
+
+  --light-get: #067ab8;
+  --light-post: #09825d;
+  --light-update: #e56f4a;
+  --light-delete: #e54a4a;
+}
+
+@import 'tabs-default'
+@import 'admonition'
+@import 'apidoc'
+@import 'param'
+
+.theme-container.api-document
+  font-size: 14px
+
+  *
+    box-sizing: border-box
+
+  {$contentClass}:not(.custom)
+    padding-left: 0
+    padding-right: 0
+    max-width: var(--content-max-width)
+
+    > *:not(.main-section)
+      margin-left: 2.5rem
+      margin-right: 2.5rem
+
+  .sidebar
+    font-size 15px
+
+    .sidebar-group
+      a
+        &.sidebar-link
+          padding-left: 1rem;
+
+  h1, h2, h3, h4, h5, h6
+    &
+      margin-top (0.5rem - $navbarHeight)
+      padding-top ($navbarHeight + 1rem)
+      margin-bottom 0
+      border-bottom none

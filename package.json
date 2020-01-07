@@ -1,0 +1,24 @@
+{
+  "name": "vuepress-theme-apidoc",
+  "version": "0.0.1",
+  "description": "Vuepress Theme that integrated some vue components, Inspired by Stripe Docs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "vue",
+    "vuepress"
+  ],
+  "author": "Wishnu Eka",
+  "license": "MIT",
+  "dependencies": {
+    "markdown-it-attrs": "^3.0.1",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-imsize": "^2.0.1",
+    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-code-copy": "^1.0.4",
+    "vuepress-plugin-tabs": "^0.2.2"
+  }
+}

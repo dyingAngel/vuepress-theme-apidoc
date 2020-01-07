@@ -1,0 +1,276 @@
+.theme-container.api-document
+  .SectionArea-divider
+    height 1px
+    margin-top -1px
+    border-bottom 1px solid #e3e8ee
+    width: calc(100% - var(--method-area-padding) - var(--method-area-padding))
+    max-width calc(var(--copy-max-width) + var(--example-max-width) + var(--method-area-padding))
+
+  .section
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child
+      margin-top 0
+
+    &.main-section
+      background: inherit
+
+      &.closed
+        background: #f7fafc
+
+      > .SectionArea-divider
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 100%;
+
+      details.section-details-wrapper
+        width: 100%
+
+        & > summary
+          margin-bottom: 40px
+          margin-left: var(--method-area-padding)
+          align: center
+          padding: 6px var(--method-area-padding)
+          border: 1px solid #e3e8ee
+          cursor: pointer
+          border-radius: 16px
+          display: inline-block
+          color: #067ab8
+          background: white
+          font-size: 13px
+      
+      details[open].section-details-wrapper
+        & > summary
+          display: none
+
+  .section-area
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: var(--content-max-width);
+    padding: 1em var(--method-area-padding) 2em var(--method-area-padding);
+
+    @media screen and (max-width: 848px)
+      flex-direction: column;
+      align-items: center;
+
+  .section-left
+    width: var(--copy-width);
+    max-width: var(--copy-max-width);
+    margin-right: var(--method-area-padding);
+    flex-shrink: 0;
+
+    @media screen and (max-width: 848px)
+      width: 100%;
+      margin-right: 0;
+
+    h1, h2, h3, h4, h5, h6
+      &
+        margin-bottom: 0
+        padding-bottom: 5px
+
+  .section-right
+    max-width: var(--example-max-width);
+    min-width: var(--example-min-width);
+    flex-grow: 1;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+
+    @media screen and (max-width: 848px)
+      position: static;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+      min-width: 100%;
+
+    &.right-spacer
+      >*:first-child
+        margin-top: calc(var(--section-header-line-height) + var(--sp20));
+
+  .section-item-container
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.07);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+
+    .section-topbar
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      font-size: 14px;
+    
+    div[class*="language-"]
+      &::before
+        content: ''
+
+      .code-copy
+        svg
+          right: 15px
+
+    .tabs-component
+      margin: 0
+
+      .tabs-component-tabs
+        margin: 0
+        padding: 5px 10px
+        border: none
+        border-radius: unset
+
+        .tabs-component-tab
+          background-color: #191c21
+          border: none
+          border-radius: 3px
+          color: #a3acb9
+          font-size: 13px
+
+          &.is-active
+            background-color: #f7fafc
+            color: #282c34
+
+          a
+            &:hover
+              border-radius: 3px;
+              text-decoration: none
+
+      .tabs-component-panels
+        background-color: inherit
+        border: none
+        padding: 0
+
+  .section-notes
+    background: #f7fafc;
+    color: #4f566b;
+
+    .section-topbar
+      color: #4f566b;
+      background: #e3e8ee;
+    
+    & > p 
+      margin 0
+      padding 12px 20px 8px 20px
+
+    & > table
+      display table
+      margin 0
+      padding 12px 20px
+      table-layout fixed
+      width 100%
+      background-clip padding-box
+      border-collapse collapse
+      border-spacing 0
+      overflow-x visible
+
+      & > thead
+        display none
+      
+      & > tbody
+        & > tr
+          border none
+          background-color transparent
+
+          & > td
+            border none
+            padding-top 16px
+            font-size 13px
+            vertical-align top
+
+          & > td:first-child
+            font-weight 600
+
+        & > tr:first-child td
+            padding-top 16px
+
+        & > tr:last-child td
+            padding-bottom 16px
+
+    & > ul
+      padding 12px 20px
+      font-size 1em
+      line-height 25px
+      margin 0
+
+      & > li
+        list-style-type none
+        text-transform none
+        display flex
+        cursor pointer
+        flex-direction row
+        color #697386
+        letter-spacing 0.1em
+
+        code
+          background-color unset
+          padding 0
+          margin-right 10px
+          font-size inherit
+          font-weight 500
+          display block
+          width 6em
+          text-align right
+          
+          
+        &.get
+          code
+            color var(--light-get)
+        
+        &.post
+          code
+            color var(--light-post)
+
+        &.update
+          code
+            color var(--light-update)
+
+        &.delete
+          code
+            color var(--light-delete)
+
+        a
+          display block
+          text-decoration none
+
+        a:hover
+          color #282c33
+
+  .section-codes
+    background: #282c34;
+
+    .section-topbar
+      color: #a3acb9;
+      background: #3c4257;
+    
+      .get
+        color #a4cdfe
+      
+      .post
+        color #85d996
+
+      .update
+        color #ffd99e
+
+      .delete
+        color #ff8282
+    
+    div[class*="language-"] pre, div[class*="language-"] pre[class*="language-"] 
+      background transparent
+      position relative
+      z-index 1
+
+    div[class*="language-"]
+      border-radius 0px
+      background transparent
+      min-height 90px
+      max-height calc(100vh - 200px)
+      overflow-y auto
+      margin-top 8px
+
+      pre[class*="language-"]
+        margin 0
+        padding 1.25rem 1.25rem

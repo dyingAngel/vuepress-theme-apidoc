@@ -1,0 +1,104 @@
+.theme-container.api-document
+  .parameter-container
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+      font-size: 14px
+
+      li:last-child
+        border-bottom: none
+
+      li
+        border-bottom: 1px solid #e3e8ee
+        padding-top: 16px
+        padding-bottom: 15px
+
+        p
+          margin: 4px 0 0 0
+
+        p:first-child
+          color: #8792a2
+          > *
+            font-size: 14px
+            letter-spacing: .12px
+            padding: 0
+            margin: 0
+          > code
+            font-weight: 600
+            background-color: unset
+            color: #2c3e50
+          > em
+            font-weight: 600
+            color: #8792a2
+            font-style: normal
+          > strong
+            font-size: 10px
+            text-transform: uppercase
+            color: #e56f4a
+          > s
+            font-size: 10px
+            text-decoration: none
+            text-transform: uppercase
+            color: #8792a2
+
+        details
+          margin-top: 10px
+
+          & > summary
+            padding: 6px 10px
+            border: 1px solid #e3e8ee
+            cursor: pointer
+            border-radius: 16px
+            display: inline-block
+            color: #697386
+            font-size: 13px
+
+          ul
+            padding: 0
+            margin: 0
+
+            li
+              padding: 15px
+
+        details[open]
+          border: 1px solid #e3e8ee
+          border-radius: 16px
+
+          & > summary
+            display: block
+            border: none
+            border-bottom: 1px solid #e3e8ee
+            border-radius: 0
+
+    .tabs-component
+      margin: 0
+
+      .tabs-component-tabs
+        margin: 0
+        padding: 0
+        border: none
+        border-radius: unset
+        border-bottom: 1px solid #e3e8ee
+
+        .tabs-component-tab
+          background-color: inherit
+          border: none
+          border-radius: 3px
+          font-size: 14px
+          padding: 0
+
+          &.is-active
+            background-color: inherit
+
+          a
+            &:hover
+              border-radius: 3px;
+              text-decoration: none
+
+      .tabs-component-panels
+        background-color: inherit
+        border-radius: 0
+        box-shadow: unset
+        border: none
+        padding: 0
